@@ -1,0 +1,557 @@
+PS C:\2026_2\8918_DEV_OPS\Lab_L-A06\cst8918-w24-a06-terratest\test> go test -v -timeout 30m azure_webserver_test.go
+=== RUN   TestAzureLinuxVMCreation
+TestAzureLinuxVMCreation 2026-07-23T04:42:34-04:00 retry.go:91: terraform [init -upgrade=false]
+TestAzureLinuxVMCreation 2026-07-23T04:42:34-04:00 logger.go:66: Running command terraform with args [init -upgrade=false]
+TestAzureLinuxVMCreation 2026-07-23T04:42:34-04:00 logger.go:66: Initializing provider plugins found in the configuration...
+TestAzureLinuxVMCreation 2026-07-23T04:42:34-04:00 logger.go:66: - Reusing previous version of hashicorp/azurerm from the dependency lock file
+TestAzureLinuxVMCreation 2026-07-23T04:42:34-04:00 logger.go:66: - Reusing previous version of hashicorp/cloudinit from the dependency lock file
+TestAzureLinuxVMCreation 2026-07-23T04:42:34-04:00 logger.go:66: - Using previously-installed hashicorp/cloudinit v2.3.3
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: - Using previously-installed hashicorp/azurerm v3.117.1
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: Initializing the backend...
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: Initializing provider plugins found in the state...
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: Terraform has been successfully initialized!
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: You may now begin working with Terraform. Try running "terraform plan" to see
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: any changes that are required for your infrastructure. All Terraform commands
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: should now work.
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: If you ever set or change modules or backend configuration for Terraform,
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: rerun this command to reinitialize your working directory. If you forget, other
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: commands will detect it and remind you to do so if necessary.
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 retry.go:91: terraform [apply -input=false -auto-approve -var labelPrefix=yang0371a06 -lock=false]
+TestAzureLinuxVMCreation 2026-07-23T04:42:35-04:00 logger.go:66: Running command terraform with args [apply -input=false -auto-approve -var labelPrefix=yang0371a06 -lock=false]
+TestAzureLinuxVMCreation 2026-07-23T04:42:36-04:00 logger.go:66: data.cloudinit_config.init: Reading...
+TestAzureLinuxVMCreation 2026-07-23T04:42:36-04:00 logger.go:66: data.cloudinit_config.init: Read complete after 0s [id=4293555390]
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66: Terraform used the selected providers to generate the following execution
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + create
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66: Terraform will perform the following actions:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_linux_virtual_machine.webserver will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_linux_virtual_machine" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + admin_username                                         = "azureadmin"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + allow_extension_operations                             = true
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + bypass_platform_safety_checks_on_user_schedule_enabled = false
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + computer_name                                          = "yang0371a06A05VM"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + custom_data                                            = (sensitive value)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + disable_password_authentication                        = true
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + disk_controller_type                                   = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + extensions_time_budget                                 = "PT1H30M"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id                                                     = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + location                                               = "westus"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + max_bid_price                                          = -1
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + name                                                   = "yang0371a06A05VM"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + network_interface_ids                                  = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + patch_assessment_mode                                  = "ImageDefault"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + patch_mode                                             = "ImageDefault"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + platform_fault_domain                                  = -1
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + priority                                               = "Regular"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + private_ip_address                                     = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + private_ip_addresses                                   = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + provision_vm_agent                                     = true
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + public_ip_address                                      = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + public_ip_addresses                                    = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + resource_group_name                                    = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + size                                                   = "Standard_D2s_v3"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + virtual_machine_id                                     = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + vm_agent_platform_updates_enabled                      = false
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + admin_ssh_key {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwB0JobB3gRRHIRC1tFyxbKuKr2bvgGBvJ2g6TN3r25dU0amoJ7aV5PVDQDdoh3vABaUkcrkltvRbAP2CmhMauERf467WcZ54vzmo+5lVlTfwLk+tHuECJSuehyfcH+1XmmALkyJI8vq5HWq/ImFkbHpU0OwZTXvSysHAH61PIY/e/0W1+lnz81AlFpm4J3P1P23RdhciQID9al8uA6QJqPJUEmlMusaDFAyTBNmMsUD6empX/6hse/wBiBj0Rn7vW7WiErKHL6KREIHVbZBJvN3eeOmxq9zJTRvjyUPZGp1Nc8a5hAMK3G3vD3x6LTY/UehYI1WPJF5DIFvhXHZFx"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + username   = "azureadmin"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + os_disk {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + caching                   = "ReadWrite"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + disk_size_gb              = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + name                      = "yang0371a06A05OSDisk"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + storage_account_type      = "Standard_LRS"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + write_accelerator_enabled = false
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + source_image_reference {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + offer     = "0001-com-ubuntu-server-jammy"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + publisher = "Canonical"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + sku       = "22_04-lts-gen2"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + version   = "latest"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + termination_notification (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_network_interface.webserver will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_network_interface" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + accelerated_networking_enabled = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + applied_dns_servers            = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + dns_servers                    = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + enable_accelerated_networking  = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + enable_ip_forwarding           = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id                             = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + internal_domain_name_suffix    = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + ip_forwarding_enabled          = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + location                       = "westus"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + mac_address                    = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + name                           = "yang0371a06A05Nic"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + private_ip_address             = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + private_ip_addresses           = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + resource_group_name            = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + virtual_machine_id             = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + ip_configuration {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + name                                               = "yang0371a06A05NicConfig"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + primary                                            = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + private_ip_address                                 = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + private_ip_address_allocation                      = "Dynamic"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + private_ip_address_version                         = "IPv4"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + public_ip_address_id                               = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + subnet_id                                          = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_network_interface_security_group_association.webserver will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_network_interface_security_group_association" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id                        = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + network_interface_id      = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + network_security_group_id = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_network_security_group.webserver will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_network_security_group" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id                  = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + location            = "westus"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + name                = "yang0371a06A05SG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + resource_group_name = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + security_rule       = [
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + access                                     = "Allow"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_address_prefix                 = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_address_prefixes               = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_application_security_group_ids = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_port_range                     = "22"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_port_ranges                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + direction                                  = "Inbound"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + name                                       = "SSH"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + priority                                   = 1001
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + protocol                                   = "Tcp"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_address_prefix                      = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_address_prefixes                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_application_security_group_ids      = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_port_range                          = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_port_ranges                         = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:                 # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:             },
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + access                                     = "Allow"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_address_prefix                 = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_address_prefixes               = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_application_security_group_ids = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_port_range                     = "80"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + destination_port_ranges                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + direction                                  = "Inbound"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + name                                       = "HTTP"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + priority                                   = 1002
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + protocol                                   = "Tcp"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_address_prefix                      = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_address_prefixes                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_application_security_group_ids      = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_port_range                          = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:               + source_port_ranges                         = []
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:                 # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:             },
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:         ]
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_public_ip.webserver will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_public_ip" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + allocation_method       = "Static"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + ddos_protection_mode    = "VirtualNetworkInherited"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + fqdn                    = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id                      = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + idle_timeout_in_minutes = 4
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + ip_address              = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + ip_version              = "IPv4"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + location                = "westus"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + name                    = "yang0371a06A05PublicIP"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + resource_group_name     = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + sku                     = "Standard"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + sku_tier                = "Regional"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_resource_group.rg will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_resource_group" "rg" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id       = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + location = "westus"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + name     = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_subnet.webserver will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_subnet" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + address_prefixes                               = [
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + "10.0.1.0/24",
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:         ]
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + default_outbound_access_enabled                = true
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + enforce_private_link_endpoint_network_policies = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + enforce_private_link_service_network_policies  = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id                                             = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + name                                           = "yang0371a06A05Subnet"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + private_endpoint_network_policies              = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + private_endpoint_network_policies_enabled      = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + private_link_service_network_policies_enabled  = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + resource_group_name                            = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + virtual_network_name                           = "yang0371a06A05Vnet"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   # azurerm_virtual_network.vnet will be created
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource "azurerm_virtual_network" "vnet" {
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + address_space       = [
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:           + "10.0.0.0/16",
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:         ]
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + dns_servers         = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + guid                = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + id                  = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + location            = "westus"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + name                = "yang0371a06A05Vnet"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + resource_group_name = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:       + subnet              = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66: Plan: 8 to add, 0 to change, 0 to destroy.
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66: Changes to Outputs:
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + nic_name            = "yang0371a06A05Nic"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + public_ip           = (known after apply)
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + resource_group_name = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:42:46-04:00 logger.go:66:   + vm_name             = "yang0371a06A05VM"
+TestAzureLinuxVMCreation 2026-07-23T04:42:58-04:00 logger.go:66: azurerm_resource_group.rg: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:08-04:00 logger.go:66: azurerm_resource_group.rg: Still creating... [00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:43:10-04:00 logger.go:66: azurerm_resource_group.rg: Creation complete after 12s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG]
+TestAzureLinuxVMCreation 2026-07-23T04:43:10-04:00 logger.go:66: azurerm_public_ip.webserver: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:10-04:00 logger.go:66: azurerm_virtual_network.vnet: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:10-04:00 logger.go:66: azurerm_network_security_group.webserver: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:12-04:00 logger.go:66: azurerm_network_security_group.webserver: Creation complete after 3s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG]
+TestAzureLinuxVMCreation 2026-07-23T04:43:13-04:00 logger.go:66: azurerm_public_ip.webserver: Creation complete after 3s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/publicIPAddresses/yang0371a06A05PublicIP]
+TestAzureLinuxVMCreation 2026-07-23T04:43:15-04:00 logger.go:66: azurerm_virtual_network.vnet: Creation complete after 6s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet]
+TestAzureLinuxVMCreation 2026-07-23T04:43:15-04:00 logger.go:66: azurerm_subnet.webserver: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:21-04:00 logger.go:66: azurerm_subnet.webserver: Creation complete after 5s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet/subnets/yang0371a06A05Subnet]
+TestAzureLinuxVMCreation 2026-07-23T04:43:21-04:00 logger.go:66: azurerm_network_interface.webserver: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:23-04:00 logger.go:66: azurerm_network_interface.webserver: Creation complete after 3s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic]
+TestAzureLinuxVMCreation 2026-07-23T04:43:23-04:00 logger.go:66: azurerm_network_interface_security_group_association.webserver: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:23-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Creating...
+TestAzureLinuxVMCreation 2026-07-23T04:43:26-04:00 logger.go:66: azurerm_network_interface_security_group_association.webserver: Creation complete after 3s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic|/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG]
+TestAzureLinuxVMCreation 2026-07-23T04:43:33-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still creating... [00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:43:43-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still creating... [00m20s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:43:53-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still creating... [00m30s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:44:03-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still creating... [00m40s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:44:13-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still creating... [00m50s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Creation complete after 50s [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Compute/virtualMachines/yang0371a06A05VM]
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: Outputs:
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: nic_name = "yang0371a06A05Nic"
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: public_ip = "52.234.26.103"
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: resource_group_name = "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: vm_name = "yang0371a06A05VM"
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 retry.go:91: terraform [output -no-color -json vm_name]
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: Running command terraform with args [output -no-color -json vm_name]
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: "yang0371a06A05VM"
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 retry.go:91: terraform [output -no-color -json resource_group_name]
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: Running command terraform with args [output -no-color -json resource_group_name]
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: "yang0371a06-A05-RG"
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 retry.go:91: terraform [output -no-color -json nic_name]
+TestAzureLinuxVMCreation 2026-07-23T04:44:14-04:00 logger.go:66: Running command terraform with args [output -no-color -json nic_name]
+TestAzureLinuxVMCreation 2026-07-23T04:44:15-04:00 logger.go:66: "yang0371a06A05Nic"
+=== RUN   TestAzureLinuxVMCreation/Confirm_VM_exists
+=== RUN   TestAzureLinuxVMCreation/Confirm_NIC_exists_and_is_connected_to_VM
+=== RUN   TestAzureLinuxVMCreation/Confirm_VM_uses_Ubuntu_22.04
+TestAzureLinuxVMCreation 2026-07-23T04:44:25-04:00 retry.go:91: terraform [destroy -auto-approve -input=false -var labelPrefix=yang0371a06 -lock=false]
+TestAzureLinuxVMCreation 2026-07-23T04:44:25-04:00 logger.go:66: Running command terraform with args [destroy -auto-approve -input=false -var labelPrefix=yang0371a06 -lock=false]
+TestAzureLinuxVMCreation 2026-07-23T04:44:26-04:00 logger.go:66: data.cloudinit_config.init: Reading...
+TestAzureLinuxVMCreation 2026-07-23T04:44:26-04:00 logger.go:66: data.cloudinit_config.init: Read complete after 0s [id=4293555390]
+TestAzureLinuxVMCreation 2026-07-23T04:44:39-04:00 logger.go:66: azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG]
+TestAzureLinuxVMCreation 2026-07-23T04:44:39-04:00 logger.go:66: azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet]
+TestAzureLinuxVMCreation 2026-07-23T04:44:39-04:00 logger.go:66: azurerm_public_ip.webserver: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/publicIPAddresses/yang0371a06A05PublicIP]
+TestAzureLinuxVMCreation 2026-07-23T04:44:39-04:00 logger.go:66: azurerm_network_security_group.webserver: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG]
+TestAzureLinuxVMCreation 2026-07-23T04:44:39-04:00 logger.go:66: azurerm_subnet.webserver: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet/subnets/yang0371a06A05Subnet]
+TestAzureLinuxVMCreation 2026-07-23T04:44:39-04:00 logger.go:66: azurerm_network_interface.webserver: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic]
+TestAzureLinuxVMCreation 2026-07-23T04:44:40-04:00 logger.go:66: azurerm_network_interface_security_group_association.webserver: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic|/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG]
+TestAzureLinuxVMCreation 2026-07-23T04:44:40-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Refreshing state... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Compute/virtualMachines/yang0371a06A05VM]
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66: Terraform used the selected providers to generate the following execution
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - destroy
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66: Terraform will perform the following actions:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_linux_virtual_machine.webserver will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_linux_virtual_machine" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - admin_username                                         = "azureadmin" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - allow_extension_operations                             = true -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - bypass_platform_safety_checks_on_user_schedule_enabled = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - computer_name                                          = "yang0371a06A05VM" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - custom_data                                            = (sensitive value) -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - disable_password_authentication                        = true -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - disk_controller_type                                   = "SCSI" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - encryption_at_host_enabled                             = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - extensions_time_budget                                 = "PT1H30M" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id                                                     = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Compute/virtualMachines/yang0371a06A05VM" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - location                                               = "westus" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - max_bid_price                                          = -1 -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - name                                                   = "yang0371a06A05VM" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - network_interface_ids                                  = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic",
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - patch_assessment_mode                                  = "ImageDefault" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - patch_mode                                             = "ImageDefault" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - platform_fault_domain                                  = -1 -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - priority                                               = "Regular" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - private_ip_address                                     = "10.0.1.4" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - private_ip_addresses                                   = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - "10.0.1.4",
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - provision_vm_agent                                     = true -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - public_ip_address                                      = "52.234.26.103" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - public_ip_addresses                                    = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - "52.234.26.103",
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - resource_group_name                                    = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - secure_boot_enabled                                    = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - size                                                   = "Standard_D2s_v3" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - tags                                                   = {} -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - virtual_machine_id                                     = "c58536b1-b5f5-43d7-aeb1-3d9c777ec65c" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - vm_agent_platform_updates_enabled                      = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - vtpm_enabled                                           = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         # (13 unchanged attributes hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - admin_ssh_key {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwB0JobB3gRRHIRC1tFyxbKuKr2bvgGBvJ2g6TN3r25dU0amoJ7aV5PVDQDdoh3vABaUkcrkltvRbAP2CmhMauERf467WcZ54vzmo+5lVlTfwLk+tHuECJSuehyfcH+1XmmALkyJI8vq5HWq/ImFkbHpU0OwZTXvSysHAH61PIY/e/0W1+lnz81AlFpm4J3P1P23RdhciQID9al8uA6QJqPJUEmlMusaDFAyTBNmMsUD6empX/6hse/wBiBj0Rn7vW7WiErKHL6KREIHVbZBJvN3eeOmxq9zJTRvjyUPZGp1Nc8a5hAMK3G3vD3x6LTY/UehYI1WPJF5DIFvhXHZFx" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - username   = "azureadmin" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - os_disk {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - caching                          = "ReadWrite" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - disk_size_gb                     = 30 -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - name                             = "yang0371a06A05OSDisk" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - storage_account_type             = "Standard_LRS" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - write_accelerator_enabled        = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:             # (3 unchanged attributes hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - source_image_reference {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - offer     = "0001-com-ubuntu-server-jammy" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - publisher = "Canonical" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - sku       = "22_04-lts-gen2" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - version   = "latest" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_network_interface.webserver will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_network_interface" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - accelerated_networking_enabled = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - applied_dns_servers            = [] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - dns_servers                    = [] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - enable_accelerated_networking  = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - enable_ip_forwarding           = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id                             = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - internal_domain_name_suffix    = "5o3fs2cpasre3it1wvgg2jxlef.dx.internal.cloudapp.net" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - ip_forwarding_enabled          = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - location                       = "westus" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - mac_address                    = "00-22-48-0A-C4-70" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - name                           = "yang0371a06A05Nic" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - private_ip_address             = "10.0.1.4" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - private_ip_addresses           = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - "10.0.1.4",
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - resource_group_name            = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - tags                           = {} -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - virtual_machine_id             = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Compute/virtualMachines/yang0371a06A05VM" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         # (4 unchanged attributes hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - ip_configuration {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - name                                               = "yang0371a06A05NicConfig" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - primary                                            = true -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - private_ip_address                                 = "10.0.1.4" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - private_ip_address_allocation                      = "Dynamic" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - private_ip_address_version                         = "IPv4" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - public_ip_address_id                               = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/publicIPAddresses/yang0371a06A05PublicIP" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - subnet_id                                          = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet/subnets/yang0371a06A05Subnet" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:             # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_network_interface_security_group_association.webserver will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_network_interface_security_group_association" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id                        = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic|/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - network_interface_id      = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - network_security_group_id = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_network_security_group.webserver will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_network_security_group" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id                  = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - location            = "westus" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - name                = "yang0371a06A05SG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - resource_group_name = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - security_rule       = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - access                                     = "Allow"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_address_prefix                 = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_address_prefixes               = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_application_security_group_ids = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_port_range                     = "22"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_port_ranges                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - direction                                  = "Inbound"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - name                                       = "SSH"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - priority                                   = 1001
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - protocol                                   = "Tcp"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_address_prefix                      = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_address_prefixes                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_application_security_group_ids      = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_port_range                          = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_port_ranges                         = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:                 # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:             },
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - access                                     = "Allow"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_address_prefix                 = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_address_prefixes               = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_application_security_group_ids = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_port_range                     = "80"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - destination_port_ranges                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - direction                                  = "Inbound"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - name                                       = "HTTP"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - priority                                   = 1002
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - protocol                                   = "Tcp"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_address_prefix                      = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_address_prefixes                    = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_application_security_group_ids      = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_port_range                          = "*"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - source_port_ranges                         = []
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:                 # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:             },
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - tags                = {} -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_public_ip.webserver will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_public_ip" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - allocation_method       = "Static" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - ddos_protection_mode    = "VirtualNetworkInherited" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id                      = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/publicIPAddresses/yang0371a06A05PublicIP" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - idle_timeout_in_minutes = 4 -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - ip_address              = "52.234.26.103" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - ip_tags                 = {} -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - ip_version              = "IPv4" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - location                = "westus" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - name                    = "yang0371a06A05PublicIP" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - resource_group_name     = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - sku                     = "Standard" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - sku_tier                = "Regional" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - tags                    = {} -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - zones                   = [] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_resource_group.rg will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_resource_group" "rg" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id         = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - location   = "westus" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - name       = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - tags       = {} -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_subnet.webserver will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_subnet" "webserver" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - address_prefixes                               = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - "10.0.1.0/24",
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - default_outbound_access_enabled                = true -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - enforce_private_link_endpoint_network_policies = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - enforce_private_link_service_network_policies  = false -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id                                             = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet/subnets/yang0371a06A05Subnet" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - name                                           = "yang0371a06A05Subnet" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - private_endpoint_network_policies              = "Enabled" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - private_endpoint_network_policies_enabled      = true -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - private_link_service_network_policies_enabled  = true -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - resource_group_name                            = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - service_endpoint_policy_ids                    = [] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - service_endpoints                              = [] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - virtual_network_name                           = "yang0371a06A05Vnet" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   # azurerm_virtual_network.vnet will be destroyed
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource "azurerm_virtual_network" "vnet" {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - address_space           = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - "10.0.0.0/16",
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - dns_servers             = [] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - flow_timeout_in_minutes = 0 -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - guid                    = "7059bafb-044f-4ea2-a27b-b54c6e26eb25" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - id                      = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - location                = "westus" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - name                    = "yang0371a06A05Vnet" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - resource_group_name     = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - subnet                  = [
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:           - {
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - address_prefix = "10.0.1.0/24"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - id             = "/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet/subnets/yang0371a06A05Subnet"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:               - name           = "yang0371a06A05Subnet"
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:                 # (1 unchanged attribute hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:             },
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         ] -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:       - tags                    = {} -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:         # (2 unchanged attributes hidden)
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:     }
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66: Plan: 0 to add, 0 to change, 8 to destroy.
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66: Changes to Outputs:
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - nic_name            = "yang0371a06A05Nic" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - public_ip           = "52.234.26.103" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - resource_group_name = "yang0371a06-A05-RG" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:44:51-04:00 logger.go:66:   - vm_name             = "yang0371a06A05VM" -> null
+TestAzureLinuxVMCreation 2026-07-23T04:45:00-04:00 logger.go:66: azurerm_network_interface_security_group_association.webserver: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic|/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG]
+TestAzureLinuxVMCreation 2026-07-23T04:45:00-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Compute/virtualMachines/yang0371a06A05VM]
+TestAzureLinuxVMCreation 2026-07-23T04:45:03-04:00 logger.go:66: azurerm_network_interface_security_group_association.webserver: Destruction complete after 4s
+TestAzureLinuxVMCreation 2026-07-23T04:45:03-04:00 logger.go:66: azurerm_network_security_group.webserver: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkSecurityGroups/yang0371a06A05SG]
+TestAzureLinuxVMCreation 2026-07-23T04:45:10-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...mpute/virtualMachines/yang0371a06A05VM, 00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:45:13-04:00 logger.go:66: azurerm_network_security_group.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...networkSecurityGroups/yang0371a06A05SG, 00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:45:14-04:00 logger.go:66: azurerm_network_security_group.webserver: Destruction complete after 11s
+TestAzureLinuxVMCreation 2026-07-23T04:45:20-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...mpute/virtualMachines/yang0371a06A05VM, 00m20s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:45:30-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...mpute/virtualMachines/yang0371a06A05VM, 00m30s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:45:40-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...mpute/virtualMachines/yang0371a06A05VM, 00m40s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:45:43-04:00 logger.go:66: azurerm_linux_virtual_machine.webserver: Destruction complete after 44s
+TestAzureLinuxVMCreation 2026-07-23T04:45:43-04:00 logger.go:66: azurerm_network_interface.webserver: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/networkInterfaces/yang0371a06A05Nic]
+TestAzureLinuxVMCreation 2026-07-23T04:45:53-04:00 logger.go:66: azurerm_network_interface.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...rk/networkInterfaces/yang0371a06A05Nic, 00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:45:55-04:00 logger.go:66: azurerm_network_interface.webserver: Destruction complete after 11s
+TestAzureLinuxVMCreation 2026-07-23T04:45:55-04:00 logger.go:66: azurerm_subnet.webserver: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet/subnets/yang0371a06A05Subnet]
+TestAzureLinuxVMCreation 2026-07-23T04:45:55-04:00 logger.go:66: azurerm_public_ip.webserver: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/publicIPAddresses/yang0371a06A05PublicIP]
+TestAzureLinuxVMCreation 2026-07-23T04:46:05-04:00 logger.go:66: azurerm_public_ip.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...blicIPAddresses/yang0371a06A05PublicIP, 00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:46:05-04:00 logger.go:66: azurerm_subnet.webserver: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...06A05Vnet/subnets/yang0371a06A05Subnet, 00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:46:05-04:00 logger.go:66: azurerm_subnet.webserver: Destruction complete after 11s
+TestAzureLinuxVMCreation 2026-07-23T04:46:05-04:00 logger.go:66: azurerm_virtual_network.vnet: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG/providers/Microsoft.Network/virtualNetworks/yang0371a06A05Vnet]
+TestAzureLinuxVMCreation 2026-07-23T04:46:06-04:00 logger.go:66: azurerm_public_ip.webserver: Destruction complete after 11s
+TestAzureLinuxVMCreation 2026-07-23T04:46:15-04:00 logger.go:66: azurerm_virtual_network.vnet: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...ork/virtualNetworks/yang0371a06A05Vnet, 00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:46:16-04:00 logger.go:66: azurerm_virtual_network.vnet: Destruction complete after 11s
+TestAzureLinuxVMCreation 2026-07-23T04:46:16-04:00 logger.go:66: azurerm_resource_group.rg: Destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-ad54c281d7bc/resourceGroups/yang0371a06-A05-RG]
+TestAzureLinuxVMCreation 2026-07-23T04:46:26-04:00 logger.go:66: azurerm_resource_group.rg: Still destroying... [id=/subscriptions/d8fb93ba-c4c0-4034-bb7b-...d7bc/resourceGroups/yang0371a06-A05-RG, 00m10s elapsed]
+TestAzureLinuxVMCreation 2026-07-23T04:46:32-04:00 logger.go:66: azurerm_resource_group.rg: Destruction complete after 16s
+TestAzureLinuxVMCreation 2026-07-23T04:46:33-04:00 logger.go:66:
+TestAzureLinuxVMCreation 2026-07-23T04:46:33-04:00 logger.go:66: Destroy complete! Resources: 8 destroyed.
+--- PASS: TestAzureLinuxVMCreation (238.44s)
+    --- PASS: TestAzureLinuxVMCreation/Confirm_VM_exists (6.66s)
+    --- PASS: TestAzureLinuxVMCreation/Confirm_NIC_exists_and_is_connected_to_VM (2.55s)
+    --- PASS: TestAzureLinuxVMCreation/Confirm_VM_uses_Ubuntu_22.04 (1.03s)
+PASS
+ok      command-line-arguments  240.298s
+PS C:\2026_2\8918_DEV_OPS\Lab_L-A06\cst8918-w24-a06-terratest\test>
+PS C:\2026_2\8918_DEV_OPS\Lab_L-A06\cst8918-w24-a06-terratest\test>
